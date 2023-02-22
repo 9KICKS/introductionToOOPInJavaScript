@@ -10,21 +10,21 @@ function Employee(_name, _age, _designation) {
 }
 
 Employee.prototype.lol = "haha";
-let empl = new Employee("Mark", 24, "Manager");
+let emp1 = new Employee("Mark", 24, "Manager");
 let emp2 = new Employee("Kev", 45, "Accountant");
 let emp3 = new Employee("Baby", 5, "Accountant");
-console.log(empl.age);
-empl.setAge(43);
-console.log(empl.age);
+console.log(emp1.age);
+emp1.setAge(43);
+console.log(emp1.age);
 console.log(emp2.age);
 console.log(emp2.lol);
 console.log(emp2.role);
 
 Employee.prototype.office = "True";
-empl.officeNumber = 101;
+emp1.officeNumber = 101;
 p = {role: "User", status: "active"};
 Object.setPrototypeOf(Employee, p);
-console.log(empl.officeNumber, emp2.officeNumber);
+console.log(emp1.officeNumber, emp2.officeNumber);
 console.log(emp2.role, emp2.role);
 console.log(Object.getPrototypeOf(Employee));
-console.log(empl.prototype === emp2.prototype);
+console.log(emp1.prototype === emp2.prototype);
